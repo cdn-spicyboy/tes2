@@ -3,96 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LP Combined</title>
+<title>Click Link to Watch</title>
+
 <style>
     body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
         margin: 0;
         padding: 0;
-        font-family: Arial, sans-serif;
-        background: #000;
-        color: #fff;
-        text-align: center;
     }
 
-    #lp1, #lp2 {
+    /* ===== LP WRAPPER ===== */
+    .page {
         display: none;
         padding: 20px;
+        max-width: 420px;
+        margin: auto;
+        margin-top: 40px;
+    }
+
+    .active {
+        display: block;
+    }
+
+    /* ===== LP 1 (AGE GATE) ===== */
+    .box {
+        background: white;
+        padding: 20px 25px;
+        width: 320px;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        margin: auto;
+    }
+
+    .video-link {
+        background: #1b1f23;
+        color: white;
+        padding: 12px;
+        border-radius: 6px;
+        display: block;
+        margin: 15px 0;
+        text-decoration: none;
+        font-weight: bold;
+        word-wrap: break-word;
+        font-size: 14px;
     }
 
     .btn {
-        background: red;
-        padding: 15px 30px;
-        border-radius: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        margin-top: 20px;
+        padding: 12px 14px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
         font-weight: bold;
+        cursor: pointer;
+        width: 48%;
         color: white;
-        display: inline-block;
+    }
+    .ok { background: #1dbf00; }
+    .next { background: #222; }
+    .exit { background: #cc0000; }
+
+    .btn-wrapper{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
     }
 
-    #videoContent { display: none; margin-top: 20px; }
+    /* ===== LP 2 (VIDEO PLAYER) ===== */
+
+    body.dark {
+        background: #101014;
+        color: white;
+    }
+
+    header {
+      background: #191a1f;
+      padding: 18px 12px;
+      text-align: center;
+      font-size: 1.3rem;
+      border-bottom: 1px solid #2a2a2f;
+    }
+
+    video {
+        width: 100%;
+        border-radius: 12px;
+        background: #18181e;
+        border: 1px solid #333;
+    }
+
+    footer {
+      margin-top: 25px;
+      text-align: center;
+      padding: 10px;
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+
 </style>
 </head>
 <body>
 
-<!-- ===================================== -->
-<!--                LP 1                   -->
-<!-- ===================================== -->
-<div id="lp1">
-    <h2>WARNING: ADULT CONTENT</h2>
+<!-- ======================== -->
+<!--        LP 1              -->
+<!-- ======================== -->
+<div id="page1" class="page active">
+    <div class="box">
 
-    <!-- Banner Adsterra -->
-    <div id="adTop">
+        <!-- Banner Adsterra -->
+        <div style="margin-bottom:15px;">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '71fd9d79d951b55faedafe5af87ebbe5',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/71fd9d79d951b55faedafe5af87ebbe5/invoke.js"></script>
+        </div>
+
+        <h2>Click Link to Watch</h2>
+
+        <a href="#" class="video-link">https://cdn.videy.co/t1A57zmc1.mp4</a>
+
+        <div class="btn-wrapper">
+            <button class="btn next" onclick="goPage2()">Continue to Watch</button>
+            <button class="btn ok" onclick="goAds()">I AM 18+</button>
+            <button class="btn exit" onclick="goAds()">EXIT</button>
+        </div>
+    </div>
+</div>
+
+<!-- ======================== -->
+<!--        LP 2              -->
+<!-- ======================== -->
+<div id="page2" class="page">
+
+    <header>
         <script type="text/javascript">
             atOptions = {
-                'key' : '71fd9d79d951b55faedafe5af87ebbe5',
+                'key' : '464e9d7e745dbdf57c0ef1f8aec86a6c',
                 'format' : 'iframe',
-                'height' : 50,
-                'width' : 320,
+                'height' : 250,
+                'width' : 300,
                 'params' : {}
             };
         </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/71fd9d79d951b55faedafe5af87ebbe5/invoke.js"></script>
-    </div>
+        <script type="text/javascript" src="//specificationauthenticrelentless.com/464e9d7e745dbdf57c0ef1f8aec86a6c/invoke.js"></script>
+    </header>
 
-    <div class="btn" onclick="goToLP2()">I AM 18+</div>
-</div>
+    <video controls autoplay playsinline controlslist="nofullscreen nodownload noremoteplayback"
+           disablepictureinpicture preload="metadata">
+      <source src="https://cdn.videy.co/t1A57zmc1.mp4" type="video/mp4">
+    </video>
 
-<!-- ===================================== -->
-<!--                LP 2                   -->
-<!-- ===================================== -->
-<div id="lp2">
-    <h2>Click Play to Watch</h2>
-
-    <div class="btn" onclick="triggerAdThenPlay()">▶ PLAY VIDEO</div>
-
-    <div id="videoContent">
-        <video width="100%" controls>
-            <source src="https://cdn.videy.co/t1A57zmc1.mp4" type="video/mp4">
-        </video>
-    </div>
+    <footer>© 2025 Blacked Streaming</footer>
 </div>
 
 <script>
-    // Show LP1 first
-    document.getElementById("lp1").style.display = "block";
+function goAds() {
+    window.location.href = "https://www.effectivegatecpm.com/uivfwzs5?key=3daaa79034f36ffd3b588e0669da5623";
+}
 
-    // Move to LP2 without redirect
-    function goToLP2() {
-        document.getElementById("lp1").style.display = "none";
-        document.getElementById("lp2").style.display = "block";
-    }
-
-    // Ad trigger before video shows
-    function triggerAdThenPlay() {
-        window.open("https://www.highperformanceformat.com/71fd9d79d951b55faedafe5af87ebbe5/invoke.js");
-
-        setTimeout(() => {
-            document.querySelector(".btn").style.display = "none";
-            document.getElementById("videoContent").style.display = "block";
-        }, 1200); // Delay biar iklan sempat muncul
-    }
+function goPage2() {
+    document.body.classList.add("dark");
+    document.getElementById("page1").classList.remove("active");
+    document.getElementById("page2").classList.add("active");
+}
 </script>
 
 </body>
