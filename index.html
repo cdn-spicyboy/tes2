@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Click Link to Watch</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        margin: 0;
+        padding: 0;
+    }
+
+    .centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .box {
+        background: white;
+        padding: 20px 25px;
+        width: 320px;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    .video-link {
+        background: #1b1f23;
+        color: white;
+        padding: 12px;
+        border-radius: 6px;
+        display: block;
+        margin: 15px 0;
+        text-decoration: none;
+        font-weight: bold;
+        word-wrap: break-word;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .btn {
+        padding: 12px 14px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        width: 48%;
+        color: white;
+    }
+    .ok { background: #1dbf00; }
+    .exit { background: #cc0000; }
+
+    .btn-wrapper{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    /* PAGE 2 VIDEO PLAYER */
+    #page2 {
+        display: none;
+        padding: 20px;
+    }
+
+    video {
+        width: 100%;
+        border-radius: 10px;
+    }
+</style>
+</head>
+<body>
+
+<!-- ====================== -->
+<!--  PAGE 1 (HOME)         -->
+<!-- ====================== -->
+<div id="page1" class="centered">
+    <div class="box">
+
+        <!-- Banner Adsterra -->
+        <script type="text/javascript">
+	atOptions = {
+		'key' : '71fd9d79d951b55faedafe5af87ebbe5',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/71fd9d79d951b55faedafe5af87ebbe5/invoke.js"></script>
+        </div>
+
+        <h2>Click Link to Watch</h2>
+
+        <!-- TOMBOL SWITCH KE HALAMAN VIDEO -->
+        <div class="video-link" onclick="showVideo()">
+            Continue to Watch
+        </div>
+
+        <div class="btn-wrapper">
+            <button class="btn ok" onclick="goAds()">I AM 18+</button>
+            <button class="btn exit" onclick="goAds()">EXIT</button>
+        </div>
+    </div>
+</div>
+
+<!-- ====================== -->
+<!--  PAGE 2 (VIDEO)        -->
+<!-- ====================== -->
+<div id="page2">
+
+    <!-- Ads banner di atas video -->
+    <div style="margin-bottom:15px;">
+        <<script type="text/javascript">
+	atOptions = {
+		'key' : '71fd9d79d951b55faedafe5af87ebbe5',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/71fd9d79d951b55faedafe5af87ebbe5/invoke.js"></script>
+    </div>
+
+    <video controls>
+        <source src="https://cdn.videy.co/sD08zaSf1.mp4" type="video/mp4">
+    </video>
+
+</div>
+
+<script>
+    function goAds() {
+        window.location.href =
+        "https://www.effectivegatecpm.com/uivfwzs5?key=3daaa79034f36ffd3b588e0669da5623";
+    }
+
+    function showVideo() {
+        document.getElementById("page1").style.display = "none";
+        document.getElementById("page2").style.display = "block";
+        window.scrollTo(0, 0);
+    }
+</script>
+
+</body>
+</html>
